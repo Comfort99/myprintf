@@ -1,9 +1,8 @@
 #include "main.h"
 /**
-  *
-  *
-  *
-  *
+  * printstrev- This prints a rev in reverse.
+  * @args: argument
+  * Return: This returns string.
   */
 int printstrev(va_list args)
 {
