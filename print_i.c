@@ -1,15 +1,15 @@
 #include "main.h"
 /**
- * print_u - Prints an unsigned integer in base 10.
- * @list: Variable argument list containing the unsigned integer.
- * Return: intiger
+ * print_int - Prints an integer to the standard output with a separator.
+ * @args: list of int arguments
+ * Return: The total number of characters printed
  */
-int print_u(va_list list)
+int print_int(va_list args)
 {
-	int n = va_arg(list, int);
+	int n = va_arg(args, int);
 	int num, last = n % 10;
 	int i = 1;
-	int exp = 1, digit;
+	int exp = 1;
 
 	n = n / 10;
 	num = n;
