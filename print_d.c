@@ -1,12 +1,29 @@
 #include "main.h"
 /**
- * print_d - Prints an integer to the standard output.
- * @list: A va_list containing the integer to be printed.
- * @list: Variable argument list containing the integer to be printed.
- *
+ * print_width - Prints padding based on width and fill character.
+ * @width: The minimum width of the output.
+ * @fill: The character used for padding (' ' for space, '0' for zero-padding).
+ * Return: The number of characters printed for padding.
+ */
+int print_width(int width, char fill)
+{
+	int i = 0;
+
+	while (i < width)
+	{
+		_putchar(fill);
+		i++;
+	}
+	return (i);
+}
+/**
+ * print_d - Prints a decimal number with optional width and padding.
+ * @list: A va_list of arguments.
+ * @width: The minimum width of the output.
+ * @fill: The character used for padding (' ' for space, '0' for zero-padding).
  * Return: The number of characters printed.
  */
-int print_d(va_list list)
+int print_d(va_list list, int width, char fill)
 {
 	int n = va_arg(list, int);
 	int num, last = n % 10;
@@ -24,7 +41,8 @@ int print_d(va_list list)
 		last = -last;
 		i++;
 	}
-
+	if (fill == '0')
+		i += print_width(width - i, fill);
 	if (num > 0)
 	{
 		while (num / 10 != 0)
@@ -32,9 +50,7 @@ int print_d(va_list list)
 			exp = exp * 10;
 			num = num / 10;
 		}
-
 		num = n;
-
 		while (exp > 0)
 		{
 			digit = num / exp;
@@ -44,8 +60,8 @@ int print_d(va_list list)
 			i++;
 		}
 	}
-
+	if (fill != '0')
+		i += print_width(width - i, fill);
 	_putchar(last + '0');
-
 	return (i);
 }
