@@ -1,8 +1,8 @@
 #include "main.h"
 /**
-  *
-  *
-  *
+  * printbinary - This prints a binary number
+  * @val: argument
+  * Return: This returns number
   */
 int printbinary(va_list val)
 {
