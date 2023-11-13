@@ -1,8 +1,8 @@
 #include "main.h"
 /**
-  *
-  *
-  *
+  * printc - This prints scanned character
+  * @val: argument
+  * Return: This returns 1 on success.
   *
   */
 int printc(va_list val)
