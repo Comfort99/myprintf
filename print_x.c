@@ -14,7 +14,7 @@ void print_x(va_list list, char length_modifier, int hash_flag)
 	int counter = 0;
 	unsigned int temp;
 
-	num = get_unsigned_length(list, length modifier);
+	num = get_unsigned_length(list, length_modifier);
 	temp = num;
 
 	while (num / 16 != 0)
