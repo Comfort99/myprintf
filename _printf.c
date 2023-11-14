@@ -7,23 +7,23 @@
 int _printf(const char * const format, ...)
 {
 	convert p[] = {
-		{"%s", print_strings}, {"%c", printc},
+		{"%s", print_s}, {"%c", printc},
 		{"%%", print_37},
-		{"%i", print_int}, {"%d", print_d}, {"%r", print_strev},
-		{"%R", *rot13}, {"%b", printbinary},
-		{"%u", print_un},
-		{"%o", print_ot}, {"%x", print_x}, {"%X", print_X},
+		{"%i", print_int}, {"%d", print_d}, {"%r", printstrev},
+		{"%R", print_rot13}, {"%b", printbinary},
+		{"%u", print_unsigned},
+		{"%o", printoct}, {"%x", print_x}, {"%X", print_X},
 		{"%S", printEXstr}, {"%p", printptr}
 	};
 
-	va_list list;
+	va_list args;
 	int i = 0, j, length = 0;
 
 	va_start(args, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 
-Here:
+Here:;
 	while (format[i] != '\0')
 	{
 		j = 13;

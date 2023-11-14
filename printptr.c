@@ -21,9 +21,9 @@ int printptr(va_list val)
 		}
 		return (iter);
 	}
-	x = (unsigned long int)p;
+	x = (unsigned long int)ptr;
 	_putchar('0');
 	_putchar('x');
-	y = print_x(x);
-	return (y + 2);
+	z = print_x2(x);
+	return (z + 2);
 }

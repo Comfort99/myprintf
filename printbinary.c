@@ -8,18 +8,18 @@ int printbinary(va_list val)
 {
 	int flg = 0;
 	int count = 0;
-	unsigned int numb = va_arg(val, unsigned int)
+	unsigned int numb = va_arg(val, unsigned int);
 	unsigned int k;
 	int l = 0, c = 1, d;
 
 	for (; l < 32; l++)
 	{
 		k = ((c << (31 - l)) & numb);
-		if (k >> (31 - i))
+		if (k >> (31 - l))
 			flg = 1;
 		if (flg)
 		{
-			d = k >> (31 - i);
+			d = k >> (31 - l);
 			_putchar(d + 48);
 			count++;
 		}

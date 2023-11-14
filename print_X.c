@@ -1,43 +1,38 @@
 #include "main.h"
+
 /**
- * print_X - Prints an unsigned integer in uppercase hexadecimal.
- * @list: Variable argument list containing the unsigned integer.
- * @length_modifier: converts length
- * @hash_flag: checks whether '#' is a flag
- * Return: count or -1
- */
-void print_X(va_list list, char length_modifier, int hash_flag)
+   * print_X - prints an hexgecimal number.
+    * @list: arguments.
+     * Return: counter.
+      */
+int print_X(va_list list)
 {
-	unsigned int num;
-	int i;
-	int *array;
-	int counter = 0;
-	unsigned int temp;
+		int iter;
+		int *arr;
+		int counter = 0;
+		unsigned int numb = va_arg(list, unsigned int);
+		unsigned int temp = numb;
 
-	num = get_unsigned_length(list, length modifier);
-	temp = num;
-
-	while (num / 16 != 0)
-	{
-		num /= 16;
+		while (numb / 16 != 0)
+		{
+			numb /= 16;
+			counter++;
+		}
 		counter++;
-	}
-	counter++;
-	array = malloc(counter * sizeof(int));
-	if (array == NULL)
-	{
-		return (-1);
-	}
-	for (i = 0; i < counter; i++)
-	{
-		array[i] = temp % 16;
-		temp /= 16;
-	}
-	handle_hash_flag(num, hash_flag);
-	for (i = counter - 1; i >= 0; i--)
-	{
-		_putchar("0123456789ABCDEF"[array[i]]);
-	}
-	free(array);
+		arr = malloc(counter * sizeof(int));
+
+			for (iter = 0; iter < counter; iter++)
+			{
+				arr[iter] = temp % 16;
+				temp /= 16;
+			}
+			for (iter = counter - 1; iter >= 0; iter--)
+			{
+				if (arr[iter] > 9)
+					arr[iter] = arr[iter] + 7;
+				_putchar(arr[iter] + '0');
+			}
+			free(arr);
 	return (counter);
 }
+

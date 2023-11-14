@@ -4,12 +4,12 @@
     * @num: Variable argument list containing the unsigned integer.
      * Return: count or -1
       */
-void print_X2(unsigned int long num)
+int print_X2(unsigned int num)
 {
-			long int i;
-			long int *array;
-			long int counter = 0;
-			unsigned long int temp = num;
+			int i;
+			int *array;
+			int counter = 0;
+			unsigned int tem = num;
 
 			while (num / 16 != 0)
 			{
@@ -18,18 +18,17 @@ void print_X2(unsigned int long num)
 			}
 			counter++;
 			array = malloc(counter * sizeof(int));
-			if (array == NULL)
-			{
-				return (-1);
-			}
+
 			for (i = 0; i < counter; i++)
-			}
-			array[i] = temp % 16;
-			temp /= 16;
+			{
+				array[i] = tem % 16;
+				tem /= 16;
 			}
 			for (i = counter - 1; i >= 0; i--)
 			{
-			_putchar("0123456789ABCDEF"[array[i]]);
+				if (array[i] > 9)
+					array[i] = array[i] + 7;
+				_putchar(array[i] + '0');
 			}
 			free(array);
 			return (counter);

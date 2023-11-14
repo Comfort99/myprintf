@@ -1,26 +1,36 @@
 #include "main.h"
 /**
- * rot13 -  function that encodes a string
- * @string: a pointer parameter
- * Return: string
- */
-char *rot13(char *string)
+   * print_rot13 - convert to rot13
+    * @args: printf arguments
+     * Return: counter
+       */
+int print_rot13(va_list args)
 {
-	int j = 0, i = 0, k;
-	char b[52] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"};
-	char n[52] = {"NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm"};
+	int iter, j, count = 0;
+	int m = 0;
+	char *str = va_arg(args, char*);
+	char norm[] = {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
+	char new[] = {"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"};
 
-	for (j = 0; string[j] != '\0'; j++)
+	if (str == NULL)
+	str = "(null)";
+	for (iter = 0; str[iter]; iter++)
 	{
-		k = 0;
-		for (i = 0; j < 52; i++, k++)
+		m = 0;
+		for (j = 0; norm[j] && !m; j++)
 		{
-			if (string[j] == b[i])
+			if (str[iter] == norm[j])
 			{
-				string[j] = n[k];
-				break;
+			_putchar(new[j]);
+			count++;
+			m = 1;
 			}
 		}
+		if (!m)
+		{
+			_putchar(str[iter]);
+			count++;
+		}
 	}
-	return (string);
+	return (count);
 }

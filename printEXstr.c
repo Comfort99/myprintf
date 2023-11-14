@@ -23,7 +23,7 @@ int printEXstr(va_list val)
 			value = str[iter];
 			if (value < 16)
 			{
-				_putchar('0')
+				_putchar('0');
 				len++;
 			}
 			len = len + print_X2(value);
