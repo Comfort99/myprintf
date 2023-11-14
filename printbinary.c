@@ -10,7 +10,7 @@ int printbinary(va_list val)
 	int count = 0;
 	unsigned int numb = va_arg(val, unsigned int)
 	unsigned int k;
-	int l = 0,c = 1, d;
+	int l = 0, c = 1, d;
 
 	for (; l < 32; l++)
 	{

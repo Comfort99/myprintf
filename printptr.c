@@ -1,10 +1,10 @@
 #include "main.h"
 /**
-  * printptr - 	This prints a hexadecvimal number as well
-  * @val: argument
-  * Return: Returns the number 
-  *
-  */
+ * printptr -   This prints a hexadecvimal number as well
+ * @val: argument*
+ *Return: Returns the number
+ *
+ */
 int printptr(va_list val)
 {
 	void *ptr;
