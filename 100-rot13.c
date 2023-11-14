@@ -6,18 +6,18 @@
  */
 char *rot13(char *string)
 {
-	int i = 0, j = 0, k;
+	int j = 0, i = 0, k;
 	char b[52] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"};
 	char n[52] = {"NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm"};
 
-	for (i = 0; string[i] != '\0'; i++)
+	for (j = 0; string[j] != '\0'; j++)
 	{
 		k = 0;
-		for (j = 0; j < 52; j++, k++)
+		for (i = 0; j < 52; i++, k++)
 		{
-			if (string[i] == b[j])
+			if (string[j] == b[i])
 			{
-				string[i] = n[k];
+				string[j] = n[k];
 				break;
 			}
 		}

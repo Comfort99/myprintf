@@ -18,33 +18,27 @@ typedef struct format
 {
 	char *ph;
 	int (*function)(va_list list, char length_modifier);
-    
 } convert;
-
-int print_37(void);
+char *rot13(char *string);
+int printbinary(va_list val);
 int printEXstr(va_list val);
-void print_x2(unsigned long int num);
+int printptr(va_list val);
+void print_strings(const char *separator, const unsigned int n, ...);
+void print_x(va_list list, char length_modifier, int hash_flag);
+char *_strcpy(char *dest, char *src);
+int print_37(void);
+void handle_hash_flag(int num, int hash_flag);
+int print_u(va_list list, char length_modifier);
+void print_X(va_list list, char length_modifier, int hash_flag);
+int _printf(const char * const format, ...);
+int printc(va_list val);
+int print_int(va_list args);
+int get_signed_length(va_list list, char length_modifier);
+unsigned int get_unsigned_length(va_list list, char length_modifier);
+int _putchar(char c);
+int print_d(va_list list, int width, char fill);
+int printoct(va_list val, char lenghth_modifier);
 int printstrev(va_list args);
 void print_X2(unsigned int long num);
-int printbinary(va_list val);
-int printc(va_list val);
-int printoct(va_list val);
-int _putchar(char c);
-int printptr(va_list val);
-int _printf(const char *format, ...);
-void print_X(va_list list);
-void print_x(va_list list);
-void print_o(va_list list);
-void print_u(va_list list);
-void print_all(const char * const format, ...);
-void print_string(va_list list, char *sep);
-void print_float(va_list list, char *sep;);
-void print_int(va_list list, char *sep);
-int _putchar(char c);
-char *rot13(char *string);
-void print_rev(char *s);
-char *_strcpy(char *dest, char *src);
-void print_strings(const char *separator, const unsigned int n, ...);
-
 
 #endif

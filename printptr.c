@@ -24,6 +24,6 @@ int printptr(va_list val)
 	x = (unsigned long int)p;
 	_putchar('0');
 	_putchar('x');
-	y = print_x2(x);
+	y = print_x(x);
 	return (y + 2);
 }
