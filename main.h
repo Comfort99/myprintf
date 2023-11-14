@@ -8,7 +8,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-int print_%(void);
+int print_37(void);
 int printEXstr(va_list val);
 void print_x2(unsigned long int num);
 int printstrev(va_list args);
@@ -18,7 +18,6 @@ int printc(va_list val);
 int printoct(va_list val);
 int _putchar(char c);
 int printptr(va_list val);
-
 int _printf(const char *format, ...);
 void print_X(va_list list);
 void print_x(va_list list);

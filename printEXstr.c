@@ -15,13 +15,13 @@ int printEXstr(va_list val)
 		str = "(null)";
 	for (iter = 0; str[iter] != '\0'; iter++)
 	{
-		if (str[iter] < 32 || str[iter]>= 127)
+		if (str[iter] < 32 || str[iter] >= 127)
 		{
 			_putchar('\\');
 			_putchar('x');
 			len = len + 2;
 			value = str[iter];
-			if(value < 16)
+			if (value < 16)
 			{
 				_putchar('0')
 				len++;

@@ -15,5 +15,5 @@ int printstrev(va_list args)
 		k++;
 	for (i = k - 1; i >= 0; i--)
 		_putchar(r[k]);
-	return(k);
+	return (k);
 }
