@@ -2,11 +2,12 @@
 /**
  * print_u - Prints an unsigned integer in base 10.
  * @list: Variable argument list containing the unsigned integer.
+ * @length_modifier: it converts the length
  * Return: intiger
  */
-int print_u(va_list list)
+int print_u(va_list list, char length_modifier)
 {
-	int n = va_arg(list, int);
+	unsigned int n = get_unsigned_length(list, length modifier)
 	int num, last = n % 10;
 	int i = 1;
 	int exp = 1, digit;

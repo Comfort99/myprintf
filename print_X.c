@@ -2,9 +2,10 @@
 /**
  * print_X - Prints an unsigned integer in uppercase hexadecimal.
  * @list: Variable argument list containing the unsigned integer.
+ * @length_modifier: converts length
  * Return: count or -1
  */
-void print_X(va_list list)
+void print_X(va_list list, char length_modifier)
 {
 	unsigned int num;
 	int i;
@@ -12,7 +13,7 @@ void print_X(va_list list)
 	int counter = 0;
 	unsigned int temp;
 
-	num = va_arg(list, unsigned int);
+	num = get_unsigned_length(list, length modifier);
 	temp = num;
 
 	while (num / 16 != 0)
