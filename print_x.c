@@ -12,11 +12,7 @@ int print_x(va_list list)
 	int counter = 0;
 	unsigned int temp;
 
-<<<<<<< HEAD
 	num = va_arg(list, unsigned int);
-=======
-	num = get_unsigned_length(list, length_modifier);
->>>>>>> f1ee11839d2bf31797435339bfd5ae8a260a5b9c
 	temp = num;
 
 	while (num / 16 != 0)

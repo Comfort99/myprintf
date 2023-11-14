@@ -7,22 +7,11 @@
       */
 int print_X(va_list list)
 {
-<<<<<<< HEAD
 		int iter;
 		int *arr;
 		int counter = 0;
 		unsigned int numb = va_arg(list, unsigned int);
 		unsigned int temp = numb;
-=======
-	unsigned int num;
-	int i;
-	int *array;
-	int counter = 0;
-	unsigned int temp;
-
-	num = get_unsigned_length(list, length_modifier);
-	temp = num;
->>>>>>> f1ee11839d2bf31797435339bfd5ae8a260a5b9c
 
 		while (numb / 16 != 0)
 		{
