@@ -3,9 +3,10 @@
  * print_X - Prints an unsigned integer in uppercase hexadecimal.
  * @list: Variable argument list containing the unsigned integer.
  * @length_modifier: converts length
+ * @hash_flag: checks whether '#' is a flag
  * Return: count or -1
  */
-void print_X(va_list list, char length_modifier)
+void print_X(va_list list, char length_modifier, int hash_flag)
 {
 	unsigned int num;
 	int i;
@@ -32,6 +33,7 @@ void print_X(va_list list, char length_modifier)
 		array[i] = temp % 16;
 		temp /= 16;
 	}
+	handle_hash_flag(num, hash_flag);
 	for (i = counter - 1; i >= 0; i--)
 	{
 		_putchar("0123456789ABCDEF"[array[i]]);

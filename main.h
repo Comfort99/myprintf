@@ -8,6 +8,19 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+/**
+ * struct format - converter for printf
+ * @ph: type char pointer of the specifier
+ * @function: function for the conversion specifier
+ *
+ */
+typedef struct format
+{
+	char *ph;
+	int (*function)(va_list list, char length_modifier);
+    
+} convert;
+
 int print_37(void);
 int printEXstr(va_list val);
 void print_x2(unsigned long int num);
