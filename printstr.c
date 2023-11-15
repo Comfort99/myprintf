@@ -1,9 +1,9 @@
 #include "main.h"
 /**
-   * print_s - print a string.
-    * @val: argument.
-     * Return: the length of the string.
-      */
+ * print_s - print a string.
+ * @val: argument.
+ * Return: the length of the string.
+ */
 
 int print_s(va_list val)
 {
