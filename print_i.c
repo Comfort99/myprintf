@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_int - Prints an integer to the standard output with a separator.
+ * print_int - Prints an integer to the standard output
  * @args: list of int arguments
  * Return: The total number of characters printed
  */
