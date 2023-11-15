@@ -2,13 +2,12 @@
 /**
   * printoct - Prints an octal number
   * @val: argument
-  * @length_modifier: converts length
   * Return: Returns the count
   */
 int printoct(va_list val)
 {
 	int j, *pit, count = 0;
-	unsigned int numb = va_arg (val, unsigned int);
+	unsigned int numb = va_arg(val, unsigned int);
 	unsigned int temp = numb;
 
 	while (numb / 8 != 0)
